@@ -1,28 +1,33 @@
-# Task CRUD API
+# Task CRUD API — SQLite
 
-A simple REST API built using FastAPI.
+A simple CRUD API built with FastAPI and SQLite.
 
 ## Features
 
-- Create Task
-- Read Task(s)
-- Update Task
-- Delete Task
+- Create tasks
+- Read all tasks
+- Read a single task
+- Update tasks
+- Delete tasks
+- SQLite database persistence
+- Automatic database and table creation
+- Three example tasks are inserted on the first run
+- Data survives server restarts
+- Swagger/OpenAPI documentation
 
-## Installation
+## Technology Stack
 
-```bash
-pip install fastapi uvicorn
-```
+- Python
+- FastAPI
+- Pydantic
+- SQLite
+- Uvicorn
 
-## Run
+## Database
 
-```bash
-python -m uvicorn main:app --reload
-```
+SQLite was chosen because it is lightweight and does not require a separate database server.
 
-## Swagger Documentation
+The database file is:
 
-Open:
-
-http://127.0.0.1:8000/docs
+```text
+tasks.db
